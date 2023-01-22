@@ -1,0 +1,191 @@
+[
+  {
+    "category": "shapes",
+    "totalCategory": [
+      {
+        "categoryName": "animals",
+        "size": 21
+      }
+    ]
+  },
+  {
+    "category": "stickers",
+    "totalCategory": [
+      {
+        "categoryName": "christmas",
+        "size": 20
+      },
+      {
+        "categoryName": "water color flower",
+        "size": 20
+      },
+      {
+        "categoryName": "butterfly",
+        "size": 20
+      },
+      {
+        "categoryName": "water color animal",
+        "size": 20
+      },
+      {
+        "categoryName": "book lovers",
+        "size": 20
+      },
+      {
+        "categoryName": "animal",
+        "size": 20
+      },
+      {
+        "categoryName": "beach",
+        "size": 20
+      },
+      {
+        "categoryName": "bee",
+        "size": 20
+      },
+      {
+        "categoryName": "father day",
+        "size": 20
+      },
+      {
+        "categoryName": "horror cartons",
+        "size": 20
+      }
+    ]
+  },
+  {
+    "category": "monograms",
+    "totalCategory": [
+      {
+        "categoryName": "christmas split monogram",
+        "size": 26
+      },
+      {
+        "categoryName": "christmas alphabets",
+        "size": 26
+      },
+      {
+        "categoryName": "water color flower frame",
+        "size": 20
+      },
+      {
+        "categoryName": "type alphabet",
+        "size": 26
+      },
+      {
+        "categoryName": "alphabets",
+        "size": 26
+      },
+      {
+        "categoryName": "floral patterned letters",
+        "size": 26
+      },
+      {
+        "categoryName": "flower alphabet",
+        "size": 26
+      },
+      {
+        "categoryName": "flower pack",
+        "size": 20
+      },
+      {
+        "categoryName": "glitters letters",
+        "size": 26
+      },
+      {
+        "categoryName": "luxury",
+        "size": 20
+      }
+    ]
+  },
+  {
+    "category": "svg",
+    "totalCategory": [
+      {
+        "categoryName": "chirstmas",
+        "size": 20
+      },
+      {
+        "categoryName": "new year",
+        "size": 20
+      },
+      {
+        "categoryName": "holidays",
+        "size": 20
+      },
+      {
+        "categoryName": "back to school",
+        "size": 20
+      },
+      {
+        "categoryName": "family",
+        "size": 20
+      },
+      {
+        "categoryName": "motivational",
+        "size": 25
+      },
+      {
+        "categoryName": "cancer",
+        "size": 20
+      },
+      {
+        "categoryName": "nature",
+        "size": 20
+      },
+      {
+        "categoryName": "quotes",
+        "size": 20
+      },
+      {
+        "categoryName": "thanks",
+        "size": 26
+      }
+    ]
+  },
+  {
+    "category": "watercolor",
+    "totalCategory": [
+      {
+        "categoryName": "chirstmas",
+        "size": 20
+      },
+      {
+        "categoryName": "gnomes",
+        "size": 20
+      },
+      {
+        "categoryName": "new year",
+        "size": 20
+      },
+      {
+        "categoryName": "balloons",
+        "size": 20
+      },
+      {
+        "categoryName": "bicycle",
+        "size": 20
+      },
+      {
+        "categoryName": "butterfly",
+        "size": 20
+      },
+      {
+        "categoryName": "food & drinks",
+        "size": 20
+      },
+      {
+        "categoryName": "mother father day",
+        "size": 20
+      },
+      {
+        "categoryName": "water color animal",
+        "size": 20
+      },
+      {
+        "categoryName": "water color flower",
+        "size": 20
+      }
+    ]
+  }
+]

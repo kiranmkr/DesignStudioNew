@@ -1,0 +1,107 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+
+    signingConfigs {
+        config {
+            storeFile file('D:\\working\\DesignStudioNew\\app\\jks\\design.jks')
+            keyAlias 'upload'
+            keyPassword 'design123'
+            storePassword 'design123'
+        }
+        debug {
+            storeFile file('D:\\working\\DesignStudioNew\\app\\jks\\design.jks')
+            keyAlias 'upload'
+            keyPassword 'design123'
+            storePassword 'design123'
+        }
+    }
+
+    buildToolsVersion '30.0.3'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.print.svg.design.space"
+        minSdk 21
+        //noinspection OldTargetApi
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility "1.8"
+        targetCompatibility "1.8"
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src\\main\\assets'
+            }
+        }
+    }
+
+}
+
+dependencies {
+
+    //noinspection GradleDependency
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //noinspection GradleDependency
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+    //Google Billing
+    //noinspection GradleDependency
+    implementation 'com.android.billingclient:billing-ktx:5.0.0'
+
+    // For developers using AndroidX in their applications
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    implementation "com.google.code.gson:gson:2.9.1"
+
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-storage'
+}
