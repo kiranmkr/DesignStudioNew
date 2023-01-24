@@ -54,47 +54,39 @@
     ]
   },
   {
-    "category": "monograms",
+    "category": "Monograms",
     "totalCategory": [
       {
-        "categoryName": "christmas split monogram",
+        "categoryName": "christmas split",
         "size": 26
       },
       {
-        "categoryName": "christmas alphabets",
+        "categoryName": "easter",
         "size": 26
       },
       {
-        "categoryName": "water color flower frame",
-        "size": 20
+        "categoryName": "heart",
+        "size": 6
       },
       {
-        "categoryName": "type alphabet",
+        "categoryName": "loin",
         "size": 26
       },
       {
-        "categoryName": "alphabets",
+        "categoryName": "rabit",
+        "size": 7
+      },
+      {
+        "categoryName": "ribbon",
+        "size": 27
+      },
+      {
+        "categoryName": "sunflower",
+        "size": 12
+      },
+      {
+        "categoryName": "valentine",
         "size": 26
-      },
-      {
-        "categoryName": "floral patterned letters",
-        "size": 26
-      },
-      {
-        "categoryName": "flower alphabet",
-        "size": 26
-      },
-      {
-        "categoryName": "flower pack",
-        "size": 20
-      },
-      {
-        "categoryName": "glitters letters",
-        "size": 26
-      },
-      {
-        "categoryName": "luxury",
-        "size": 20
       }
     ]
   },
