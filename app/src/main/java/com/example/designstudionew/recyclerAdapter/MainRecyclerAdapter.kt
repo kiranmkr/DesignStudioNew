@@ -24,7 +24,7 @@ class MainRecyclerAdapter : RecyclerView.Adapter<MainRecyclerAdapter.ViewHolder>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.title.text = totalCategory[position].categoryName.uppercase(Locale.ENGLISH)
+        holder.title.text = totalCategory[position].categoryName
         setCatItemRecycler(
             holder.recyclerItemView,
             totalCategory[position].categoryName,

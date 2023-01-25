@@ -1,55 +1,147 @@
 [
   {
-    "category": "shapes",
+    "category": "Shapes",
     "totalCategory": [
       {
-        "categoryName": "animals",
+        "categoryName": "Animals",
         "size": 21
+      },
+      {
+        "categoryName": "Basic",
+        "size": 20
+      },
+      {
+        "categoryName": "Celebration",
+        "size": 20
+      },
+      {
+        "categoryName": "Dad",
+        "size": 21
+      },
+      {
+        "categoryName": "Fashion",
+        "size": 20
+      },
+      {
+        "categoryName": "Flags",
+        "size": 24
+      },
+      {
+        "categoryName": "Frames",
+        "size": 20
+      },
+      {
+        "categoryName": "Fruits",
+        "size": 20
+      },
+      {
+        "categoryName": "Gym",
+        "size": 20
+      },
+      {
+        "categoryName": "Hand",
+        "size": 21
+      },
+      {
+        "categoryName": "Hearts",
+        "size": 23
+      },
+      {
+        "categoryName": "Leaves",
+        "size": 20
+      },
+      {
+        "categoryName": "Lips",
+        "size": 20
+      },
+      {
+        "categoryName": "Lotus",
+        "size": 20
+      },
+      {
+        "categoryName": "Pumpkin Face",
+        "size": 20
+      },
+      {
+        "categoryName": "Rainbow",
+        "size": 20
+      },
+      {
+        "categoryName": "Skeleton",
+        "size": 20
+      },
+      {
+        "categoryName": "Spider",
+        "size": 20
+      },
+      {
+        "categoryName": "Sun",
+        "size": 20
+      },
+      {
+        "categoryName": "Wedding",
+        "size": 20
       }
     ]
   },
   {
-    "category": "stickers",
+    "category": "Stickers",
     "totalCategory": [
       {
-        "categoryName": "christmas",
+        "categoryName": "Animal",
         "size": 20
       },
       {
-        "categoryName": "water color flower",
+        "categoryName": "Beach Summer",
         "size": 20
       },
       {
-        "categoryName": "butterfly",
+        "categoryName": "Bee",
+        "size": 15
+      },
+      {
+        "categoryName": "British Flag",
+        "size": 10
+      },
+      {
+        "categoryName": "Butterfly",
+        "size": 15
+      },
+      {
+        "categoryName": "Cartoon",
         "size": 20
       },
       {
-        "categoryName": "water color animal",
+        "categoryName": "Christmas",
         "size": 20
       },
       {
-        "categoryName": "book lovers",
+        "categoryName": "Ester Day",
         "size": 20
       },
       {
-        "categoryName": "animal",
+        "categoryName": "Heart",
+        "size": 5
+      },
+      {
+        "categoryName": "Key Chain",
         "size": 20
       },
       {
-        "categoryName": "beach",
+        "categoryName": "Mountain Camping",
         "size": 20
       },
       {
-        "categoryName": "bee",
-        "size": 20
+        "categoryName": "Unicorn",
+        "size": 12
       },
       {
-        "categoryName": "father day",
-        "size": 20
+        "categoryName": "Watercolor Denim Gnomes",
+        "size": 7
       },
       {
-        "categoryName": "horror cartons",
-        "size": 20
+        "categoryName": "Winter",
+        "size": 15
       }
     ]
   },
@@ -57,126 +149,138 @@
     "category": "Monograms",
     "totalCategory": [
       {
-        "categoryName": "christmas split",
-        "size": 26
-      },
-      {
-        "categoryName": "easter",
-        "size": 26
-      },
-      {
-        "categoryName": "heart",
-        "size": 6
-      },
-      {
-        "categoryName": "loin",
-        "size": 26
-      },
-      {
-        "categoryName": "rabit",
-        "size": 7
-      },
-      {
-        "categoryName": "ribbon",
-        "size": 27
-      },
-      {
-        "categoryName": "sunflower",
-        "size": 12
-      },
-      {
-        "categoryName": "valentine",
-        "size": 26
-      }
-    ]
-  },
-  {
-    "category": "svg",
-    "totalCategory": [
-      {
-        "categoryName": "chirstmas",
-        "size": 20
-      },
-      {
-        "categoryName": "new year",
-        "size": 20
-      },
-      {
-        "categoryName": "holidays",
-        "size": 20
-      },
-      {
-        "categoryName": "back to school",
-        "size": 20
-      },
-      {
-        "categoryName": "family",
-        "size": 20
-      },
-      {
-        "categoryName": "motivational",
+        "categoryName": "Valentine",
         "size": 25
       },
       {
-        "categoryName": "cancer",
-        "size": 20
+        "categoryName": "Sunflower",
+        "size": 12
       },
       {
-        "categoryName": "nature",
-        "size": 20
+        "categoryName": "Rabit",
+        "size": 6
       },
       {
-        "categoryName": "quotes",
-        "size": 20
-      },
-      {
-        "categoryName": "thanks",
+        "categoryName": "Christmas Split",
         "size": 26
+      },
+      {
+        "categoryName": "Easter",
+        "size": 26
+      },
+      {
+        "categoryName": "Heart",
+        "size": 6
+      },
+      {
+        "categoryName": "Loin",
+        "size": 26
+      },
+      {
+        "categoryName": "Ribbon",
+        "size": 27
       }
     ]
   },
   {
-    "category": "watercolor",
+    "category": "SVG",
     "totalCategory": [
       {
-        "categoryName": "chirstmas",
+        "categoryName": "Valentine",
+        "size": 25
+      },
+      {
+        "categoryName": "Baby",
         "size": 20
       },
       {
-        "categoryName": "gnomes",
+        "categoryName": "Baby Girl",
         "size": 20
       },
       {
-        "categoryName": "new year",
+        "categoryName": "Breast Cancer",
+        "size": 13
+      },
+      {
+        "categoryName": "Dady And Me",
         "size": 20
       },
       {
-        "categoryName": "balloons",
+        "categoryName": "Family",
+        "size": 12
+      },
+      {
+        "categoryName": "Father Day",
+        "size": 15
+      },
+      {
+        "categoryName": "Fitness",
         "size": 20
       },
       {
-        "categoryName": "bicycle",
+        "categoryName": "Inspirational",
+        "size": 10
+      },
+      {
+        "categoryName": "Kitchen",
+        "size": 9
+      },
+      {
+        "categoryName": "Nautical",
         "size": 20
       },
       {
-        "categoryName": "butterfly",
+        "categoryName": "Teacher",
         "size": 20
       },
       {
-        "categoryName": "food & drinks",
-        "size": 20
+        "categoryName": "Wedding",
+        "size": 35
+      }
+    ]
+  },
+  {
+    "category": "Water Color",
+    "totalCategory": [
+      {
+        "categoryName": "Butterfly",
+        "size": 10
       },
       {
-        "categoryName": "mother father day",
-        "size": 20
+        "categoryName": "Cats Water Color",
+        "size": 10
       },
       {
-        "categoryName": "water color animal",
-        "size": 20
+        "categoryName": "Cycle Water Color",
+        "size": 10
       },
       {
-        "categoryName": "water color flower",
-        "size": 20
+        "categoryName": "Flamingo",
+        "size": 10
+      },
+      {
+        "categoryName": "Flower Pack",
+        "size": 10
+      },
+      {
+        "categoryName": "Food & Drinks",
+        "size": 10
+      },
+      {
+        "categoryName": "Fruits",
+        "size": 10
+      },
+      {
+        "categoryName": "Jar Flowers",
+        "size": 10
+      },
+      {
+        "categoryName": "Patriotic Gnomes",
+        "size": 10
+      },
+      {
+        "categoryName": "Vespa",
+        "size": 10
       }
     ]
   }

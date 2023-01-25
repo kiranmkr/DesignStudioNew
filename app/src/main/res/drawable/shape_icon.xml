@@ -11,13 +11,13 @@
           android:pathData="M2,2h20v20h-20z"/>
       <path
           android:pathData="M11.646,12.261A1.751,1.751 0,0 1,13.172 11.4a1.791,1.791 0,0 1,0.586 0.109L13.758,7.273a0.586,0.586 0,0 0,-0.586 -0.586L3.8,6.687a0.586,0.586 0,0 0,-0.586 0.586v9.375a0.586,0.586 0,0 0,0.586 0.586L8.8,17.234Z"
-          android:fillColor="@color/colorAccent"/>
+          android:fillColor="@color/white"/>
       <path
           android:pathData="M15.516,2A5.265,5.265 0,0 0,10.566 5.516h2.606A1.76,1.76 0,0 1,14.93 7.273v5.234a5.164,5.164 0,0 0,0.586 0.039A5.273,5.273 0,0 0,15.516 2Z"
-          android:fillColor="@color/colorAccent"/>
+          android:fillColor="@color/white"/>
       <path
           android:pathData="M17.859,22L8.484,22a0.586,0.586 0,0 1,-0.509 -0.877l4.688,-8.281a0.609,0.609 0,0 1,1.017 0l4.688,8.281a0.586,0.586 0,0 1,-0.509 0.877Z"
-          android:fillColor="@color/colorAccent"/>
+          android:fillColor="@color/white"/>
     </group>
   </group>
 </vector>

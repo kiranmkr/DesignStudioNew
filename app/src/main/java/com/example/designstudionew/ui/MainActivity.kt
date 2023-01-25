@@ -382,23 +382,23 @@ class MainActivity : AppCompatActivity(), TemplateClickCallBack,
 
     private fun updateIndexList(position: Int) {
 
-        var categorySelection = "svg"
+        var categorySelection = "SVG"
 
         when (position) {
             1 -> {
-                categorySelection = "svg"
+                categorySelection = "SVG"
             }
             2 -> {
-                categorySelection = "watercolor"
+                categorySelection = "Water Color"
             }
             3 -> {
-                categorySelection = "monograms"
+                categorySelection = "Monograms"
             }
             4 -> {
-                categorySelection = "stickers"
+                categorySelection = "Stickers"
             }
             5 -> {
-                categorySelection = "shapes"
+                categorySelection = "Shapes"
             }
 
         }
@@ -452,12 +452,15 @@ class MainActivity : AppCompatActivity(), TemplateClickCallBack,
     }
 
     private fun homeSelection() {
+
         mainBinding.imHome.isSelected = true
+
         mainBinding.tvHome.setTextColor(
             ContextCompat.getColor(
                 this, R.color.colorAccent
             )
         )
+
 
         mainBinding.imSetting.isSelected = false
         mainBinding.tvSetting.setTextColor(
@@ -471,7 +474,7 @@ class MainActivity : AppCompatActivity(), TemplateClickCallBack,
         mainBinding.imHome.isSelected = false
         mainBinding.tvHome.setTextColor(
             ContextCompat.getColor(
-                this, R.color.grayColor
+                this, R.color.colorAccent
             )
         )
 
@@ -732,14 +735,14 @@ class MainActivity : AppCompatActivity(), TemplateClickCallBack,
             if (views[i].id == view_id) {
                 views[i].setCardBackgroundColor(
                     ContextCompat.getColor(
-                        this@MainActivity, R.color.colorAccent
+                        this@MainActivity, R.color.cardBack
                     )
                 )
             } else {
                 Log.d("myCard", "Card is disable ")
                 views[i].setCardBackgroundColor(
                     ContextCompat.getColor(
-                        this@MainActivity, R.color.cardBack
+                        this@MainActivity, R.color.colorAccent
                     )
                 )
             }

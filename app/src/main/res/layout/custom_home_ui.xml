@@ -89,7 +89,7 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:visibility="visible"
-                app:cardBackgroundColor="@color/colorAccent"
+                app:cardBackgroundColor="@color/cardBack"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="0dp">
 
@@ -97,7 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/_2sdp"
-                    app:cardBackgroundColor="@color/cardBack"
+                    app:cardBackgroundColor="@color/colorAccent"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="0dp">
 
@@ -110,7 +110,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/svg"
-                            android:textColor="@color/textColor"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_9sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -139,7 +139,7 @@
                 android:layout_height="@dimen/_50sdp"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
-                app:cardBackgroundColor="@color/cardBack"
+                app:cardBackgroundColor="@color/colorAccent"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="0dp">
 
@@ -147,7 +147,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/_2sdp"
-                    app:cardBackgroundColor="@color/cardBack"
+                    app:cardBackgroundColor="@color/colorAccent"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="0dp">
 
@@ -161,7 +161,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/water_color"
                             android:textAlignment="center"
-                            android:textColor="@color/textColor"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_9sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -190,7 +190,7 @@
                 android:layout_height="@dimen/_50sdp"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
-                app:cardBackgroundColor="@color/cardBack"
+                app:cardBackgroundColor="@color/colorAccent"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="0dp">
 
@@ -198,7 +198,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/_2sdp"
-                    app:cardBackgroundColor="@color/cardBack"
+                    app:cardBackgroundColor="@color/colorAccent"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="0dp">
 
@@ -211,7 +211,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/mono"
-                            android:textColor="@color/textColor"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_9sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -240,7 +240,7 @@
                 android:layout_height="@dimen/_50sdp"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
-                app:cardBackgroundColor="@color/cardBack"
+                app:cardBackgroundColor="@color/colorAccent"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="0dp">
 
@@ -248,7 +248,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/_2sdp"
-                    app:cardBackgroundColor="@color/cardBack"
+                    app:cardBackgroundColor="@color/colorAccent"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="0dp">
 
@@ -273,7 +273,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/stickers"
-                            android:textColor="@color/textColor"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_9sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -291,7 +291,7 @@
                 android:layout_height="@dimen/_50sdp"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
-                app:cardBackgroundColor="@color/cardBack"
+                app:cardBackgroundColor="@color/colorAccent"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:cardElevation="0dp">
 
@@ -299,7 +299,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="@dimen/_2sdp"
-                    app:cardBackgroundColor="@color/cardBack"
+                    app:cardBackgroundColor="@color/colorAccent"
                     app:cardCornerRadius="@dimen/_10sdp"
                     app:cardElevation="0dp">
 
@@ -312,7 +312,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/shapes"
-                            android:textColor="@color/textColor"
+                            android:textColor="@color/white"
                             android:textSize="@dimen/_9sdp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
