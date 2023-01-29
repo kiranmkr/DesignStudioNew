@@ -88,7 +88,7 @@ object Utils {
     }
 
     fun getFileExt(): String {
-        return if (mainCategory == "svg") {
+        return if (mainCategory == "SVG") {
             ".svg"
         } else {
             ".png"
@@ -104,7 +104,7 @@ object Utils {
     var feedBackDetails: String = "Report a Bug"
     var feedbackEmail: String = "couldcoding@gmail.com"
     var policyLink: String = "https://cloudcodingapp.blogspot.com/2023/01/privacy-policy.html"
-    var termsCondition: String = "https://designstudioapp.blogspot.com/p/terms-conditions.html"
+    var termsCondition: String = "https://cloudcodingapp.blogspot.com/2023/01/privacy-policy.html"
 
     var moreAppLink: String = "market://details?id=" + "com.print.svg.design.space"
 

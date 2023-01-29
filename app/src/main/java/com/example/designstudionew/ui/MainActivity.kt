@@ -151,7 +151,7 @@ class MainActivity : AppCompatActivity(), TemplateClickCallBack,
 
         mainListAdapter = MainRecyclerAdapter()
 
-        homeRoot.tvHome.setOnClickListener {
+        homeRoot.tvTitle.setOnClickListener {
             if (BuildConfig.DEBUG && GBilling.getConnectionStatus() && GBilling.isSubscribedOrPurchasedSaved) {
                 GBilling.consumePurchase(Utils.inAppPurchasedkey, this) {
                     if (it) {
@@ -471,10 +471,11 @@ class MainActivity : AppCompatActivity(), TemplateClickCallBack,
     }
 
     private fun settingSelection() {
+
         mainBinding.imHome.isSelected = false
         mainBinding.tvHome.setTextColor(
             ContextCompat.getColor(
-                this, R.color.colorAccent
+                this, R.color.grayColor
             )
         )
 

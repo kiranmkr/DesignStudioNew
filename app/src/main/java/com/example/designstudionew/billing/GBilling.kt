@@ -172,10 +172,8 @@ object GBilling {
 //                billingHandler?.onBillingError(billingResult.responseCode)
             }
         }
-        billingClient = BillingClient.newBuilder(context)
-            .setListener(purchaseUpdateListener)
-            .enablePendingPurchases()
-            .build()
+        billingClient = BillingClient.newBuilder(context).setListener(purchaseUpdateListener)
+            .enablePendingPurchases().build()
         startConnection(context)
     }
 
@@ -232,9 +230,7 @@ object GBilling {
 
     @JvmStatic
     fun isSubscribed(
-        productId: String,
-        lifecycleOwner: LifecycleOwner,
-        observer: Observer<Boolean>
+        productId: String, lifecycleOwner: LifecycleOwner, observer: Observer<Boolean>
     ) {
         val isSubscribedObserver = MutableLiveData<Boolean>()
         isSubscribedObserver.observe(lifecycleOwner, observer)
@@ -256,9 +252,7 @@ object GBilling {
 
     @JvmStatic
     fun isPurchased(
-        productId: String,
-        lifecycleOwner: LifecycleOwner,
-        observer: Observer<Boolean>
+        productId: String, lifecycleOwner: LifecycleOwner, observer: Observer<Boolean>
     ) {
         val isPurchasedObserver = MutableLiveData<Boolean>()
         isPurchasedObserver.observe(lifecycleOwner, observer)
@@ -280,9 +274,7 @@ object GBilling {
 
     @JvmStatic
     fun isPurchasedAndAcknowledged(
-        productId: String,
-        lifecycleOwner: LifecycleOwner,
-        observer: Observer<Boolean>
+        productId: String, lifecycleOwner: LifecycleOwner, observer: Observer<Boolean>
     ) {
         val isPurchasedAndAcknowledgedObserver = MutableLiveData<Boolean>()
         isPurchasedAndAcknowledgedObserver.observe(lifecycleOwner, observer)
@@ -300,9 +292,7 @@ object GBilling {
 
     @JvmStatic
     fun isSubscribedAndAcknowledged(
-        productId: String,
-        lifecycleOwner: LifecycleOwner,
-        observer: Observer<Boolean>
+        productId: String, lifecycleOwner: LifecycleOwner, observer: Observer<Boolean>
     ) {
         val isSubscribedAndAcknowledgedObserver = MutableLiveData<Boolean>()
         isSubscribedAndAcknowledgedObserver.observe(lifecycleOwner, observer)
@@ -322,8 +312,7 @@ object GBilling {
     }
 
     private fun isSubscribedAnyPrivate(
-        productIdList: ArrayList<String>,
-        callback: (isSubscribed: Boolean) -> Unit
+        productIdList: ArrayList<String>, callback: (isSubscribed: Boolean) -> Unit
     ) {
         if (isSubscriptionCached) {
             var check = false
@@ -380,8 +369,7 @@ object GBilling {
     }
 
     private fun isPurchasedAnyPrivate(
-        productIdList: ArrayList<String>,
-        callback: (isSubscribed: Boolean) -> Unit
+        productIdList: ArrayList<String>, callback: (isSubscribed: Boolean) -> Unit
     ) {
         if (isInAppCached) {
             var check = false
@@ -441,8 +429,7 @@ object GBilling {
         if (!isConnecting) {
             isConnecting = true
             preferences = context.getSharedPreferences(
-                context.packageName + "_billing_preferences",
-                ContextWrapper.MODE_PRIVATE
+                context.packageName + "_billing_preferences", ContextWrapper.MODE_PRIVATE
             )
             billingClient?.startConnection(object : BillingClientStateListener {
                 override fun onBillingSetupFinished(billingResult: BillingResult) {
@@ -501,9 +488,7 @@ object GBilling {
         val subscriptionSkuListObserver = MutableLiveData<List<SkuDetails>>()
         subscriptionSkuListObserver.observe(lifecycleOwner, observer)
         getSkuDetails(
-            SkuType.SUBS,
-            productIdList,
-            isToSort
+            SkuType.SUBS, productIdList, isToSort
         ) { error: Int?, list: List<SkuDetails>? ->
             if (error == null && list != null) subscriptionSkuListObserver.postValue(
                 list
@@ -521,9 +506,7 @@ object GBilling {
         val purchaseSkuListObserver = MutableLiveData<List<SkuDetails>>()
         purchaseSkuListObserver.observe(lifecycleOwner, observer)
         getSkuDetails(
-            SkuType.INAPP,
-            productIdList,
-            isToSort
+            SkuType.INAPP, productIdList, isToSort
         ) { error: Int?, list: List<SkuDetails>? ->
             if (error == null && list != null) purchaseSkuListObserver.postValue(
                 list
@@ -549,12 +532,7 @@ object GBilling {
         obfuscatedAccountId: String
     ) {
         subscribeOrPurchase(
-            activity,
-            productId,
-            SkuType.INAPP,
-            true,
-            obfuscatedProfileId,
-            obfuscatedAccountId
+            activity, productId, SkuType.INAPP, true, obfuscatedProfileId, obfuscatedAccountId
         )
     }
 
@@ -566,12 +544,7 @@ object GBilling {
         obfuscatedAccountId: String
     ) {
         subscribeOrPurchase(
-            activity,
-            productId,
-            SkuType.SUBS,
-            true,
-            obfuscatedProfileId,
-            obfuscatedAccountId
+            activity, productId, SkuType.SUBS, true, obfuscatedProfileId, obfuscatedAccountId
         )
     }
 
@@ -606,9 +579,7 @@ object GBilling {
 
     @JvmStatic
     fun getSubscriptionReceiptDetails(
-        productId: String,
-        lifecycleOwner: LifecycleOwner,
-        observer: Observer<Purchase>
+        productId: String, lifecycleOwner: LifecycleOwner, observer: Observer<Purchase>
     ) {
         val purchaseObserverLocalLiveData = MutableLiveData<Purchase>()
         purchaseObserverLocalLiveData.observe(lifecycleOwner, observer)
@@ -674,8 +645,7 @@ object GBilling {
     }
 
     private fun isPurchasedAndAcknowledgedRealtime(
-        productId: String,
-        callback: (isSubscribed: Boolean) -> Unit
+        productId: String, callback: (isSubscribed: Boolean) -> Unit
     ) {
         var check = false
         getInAppPurchaseList { itPurchaseList ->
@@ -704,8 +674,7 @@ object GBilling {
     }
 
     private fun isSubscribedAndAcknowledgedRealtime(
-        productId: String,
-        callback: (isSubscribed: Boolean) -> Unit
+        productId: String, callback: (isSubscribed: Boolean) -> Unit
     ) {
         var check = false
         getInAppPurchaseList { itPurchaseList ->
@@ -733,9 +702,7 @@ object GBilling {
 
     @JvmStatic
     fun getInAppReceiptDetails(
-        productId: String,
-        lifecycleOwner: LifecycleOwner,
-        observer: Observer<Purchase>
+        productId: String, lifecycleOwner: LifecycleOwner, observer: Observer<Purchase>
     ) {
         val purchaseObserverLocalLiveData = MutableLiveData<Purchase>()
         purchaseObserverLocalLiveData.observe(lifecycleOwner, observer)
@@ -773,9 +740,7 @@ object GBilling {
 
     @JvmStatic
     fun acknowledgePurchase(
-        productId: String,
-        lifecycleOwner: LifecycleOwner,
-        acknowledgeObserver: Observer<Boolean>
+        productId: String, lifecycleOwner: LifecycleOwner, acknowledgeObserver: Observer<Boolean>
     ) {
         val acknowledgeObserverLocalLiveData = MutableLiveData<Boolean>()
         acknowledgeObserverLocalLiveData.observe(lifecycleOwner, acknowledgeObserver)
@@ -783,8 +748,7 @@ object GBilling {
         if (isConnected) {
             billingClient?.queryPurchasesAsync(SkuType.INAPP, object : PurchasesResponseListener {
                 override fun onQueryPurchasesResponse(
-                    p0: BillingResult,
-                    p1: MutableList<Purchase>
+                    p0: BillingResult, p1: MutableList<Purchase>
                 ) {
                     Log.e(TAG, p0.responseCode.toString())
                     if (p0.responseCode == BillingClient.BillingResponseCode.OK) {
@@ -812,8 +776,7 @@ object GBilling {
                                 if (!purchase1!!.isAcknowledged) {
                                     val acknowledgePurchaseParams =
                                         AcknowledgePurchaseParams.newBuilder()
-                                            .setPurchaseToken(purchase1!!.purchaseToken)
-                                            .build()
+                                            .setPurchaseToken(purchase1!!.purchaseToken).build()
                                     Log.e(TAG, "acknowledge Called7")
                                     billingClient?.acknowledgePurchase(acknowledgePurchaseParams) { itBillingResult ->
                                         if (itBillingResult.responseCode == BillingClient.BillingResponseCode.OK) {
@@ -863,16 +826,13 @@ object GBilling {
 
     @JvmStatic
     fun acknowledgeSubscription(
-        productId: String,
-        lifecycleOwner: LifecycleOwner,
-        acknowledgeObserver: Observer<Boolean>
+        productId: String, lifecycleOwner: LifecycleOwner, acknowledgeObserver: Observer<Boolean>
     ) {
         val acknowledgeObserverLocalLiveData = MutableLiveData<Boolean>()
         acknowledgeObserverLocalLiveData.observe(lifecycleOwner, acknowledgeObserver)
         var purchase1: Purchase? = null
         if (isConnected) {
-            billingClient?.queryPurchasesAsync(
-                SkuType.SUBS,
+            billingClient?.queryPurchasesAsync(SkuType.SUBS,
                 PurchasesResponseListener { billingResult, mutableList ->
                     Log.e(TAG, billingResult.responseCode.toString())
                     if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
@@ -898,8 +858,7 @@ object GBilling {
                                 if (!purchase1!!.isAcknowledged) {
                                     val acknowledgePurchaseParams =
                                         AcknowledgePurchaseParams.newBuilder()
-                                            .setPurchaseToken(purchase1!!.purchaseToken)
-                                            .build()
+                                            .setPurchaseToken(purchase1!!.purchaseToken).build()
                                     Log.e(TAG, "acknowledge Called8")
                                     billingClient?.acknowledgePurchase(acknowledgePurchaseParams) { itBillingResult ->
                                         if (itBillingResult.responseCode == BillingClient.BillingResponseCode.OK) {
@@ -948,24 +907,20 @@ object GBilling {
 
     @JvmStatic
     fun consumePurchase(
-        productId: String,
-        lifecycleOwner: LifecycleOwner,
-        consumeObserver: Observer<Boolean>
+        productId: String, lifecycleOwner: LifecycleOwner, consumeObserver: Observer<Boolean>
     ) {
         val consumeObserverLocalLiveData = MutableLiveData<Boolean>()
         consumeObserverLocalLiveData.observe(lifecycleOwner, consumeObserver)
         if (isConnected) {
             billingClient?.queryPurchasesAsync(SkuType.INAPP, object : PurchasesResponseListener {
                 override fun onQueryPurchasesResponse(
-                    p0: BillingResult,
-                    p1: MutableList<Purchase>
+                    p0: BillingResult, p1: MutableList<Purchase>
                 ) {
                     if (p0.responseCode == BillingClient.BillingResponseCode.OK) {
                         p1.forEach { itPurchase ->
                             if (itPurchase.skus.contains(productId)) {
                                 val consumeParams = ConsumeParams.newBuilder()
-                                    .setPurchaseToken(itPurchase.purchaseToken)
-                                    .build()
+                                    .setPurchaseToken(itPurchase.purchaseToken).build()
                                 billingClient?.consumeAsync(consumeParams) { billingResult, outToken ->
                                     if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                                         isInAppCached = false
@@ -1003,8 +958,7 @@ object GBilling {
     }
 
     private fun isSubscribedAnyRealtime(
-        productId: ArrayList<String>,
-        callback: (isSubscribed: Boolean) -> Unit
+        productId: ArrayList<String>, callback: (isSubscribed: Boolean) -> Unit
     ) {
         var check = false
         getSubscriptionPurchaseList { itPurchaseList ->
@@ -1035,8 +989,7 @@ object GBilling {
     }
 
     private fun isPurchasedAnyRealtime(
-        productId: ArrayList<String>,
-        callback: (isSubscribed: Boolean) -> Unit
+        productId: ArrayList<String>, callback: (isSubscribed: Boolean) -> Unit
     ) {
         var check = false
         getInAppPurchaseList { itPurchaseList ->
@@ -1124,9 +1077,9 @@ object GBilling {
         Log.e(TAG, "1")
         if (purchase.purchaseState == PURCHASED) {
             if (!purchase.isAcknowledged) {
-                val acknowledgePurchaseParams = AcknowledgePurchaseParams.newBuilder()
-                    .setPurchaseToken(purchase.purchaseToken)
-                    .build()
+                val acknowledgePurchaseParams =
+                    AcknowledgePurchaseParams.newBuilder().setPurchaseToken(purchase.purchaseToken)
+                        .build()
                 billingClient?.acknowledgePurchase(acknowledgePurchaseParams) { itBillingResult ->
                     if (itBillingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                         Log.e(TAG, "Acknowledged Purchase")
@@ -1238,8 +1191,7 @@ object GBilling {
             billingClient?.querySkuDetailsAsync(params.build()) { billingResult, skuDetailsList ->
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                     val skuList = if (isToSort) sortSkuDetailsArray(
-                        productIdList,
-                        skuDetailsList
+                        productIdList, skuDetailsList
                     ) else skuDetailsList
                     callback(null, skuList)
                 } else {
@@ -1270,8 +1222,7 @@ object GBilling {
             savedProductId = productId
             var skuDetails: SkuDetails? = null
             getSkuDetails(
-                type,
-                arrayListOf(productId)
+                type, arrayListOf(productId)
             ) { errorCode: Int?, skuList: List<SkuDetails>? ->
                 if (errorCode == null) {
                     skuList?.forEach { itSkuDetail ->
@@ -1281,19 +1232,14 @@ object GBilling {
                     }
                     skuDetails?.let {
                         val billingFlowParams = if (sendCustomParams) {
-                            BillingFlowParams.newBuilder()
-                                .setSkuDetails(it)
+                            BillingFlowParams.newBuilder().setSkuDetails(it)
                                 .setObfuscatedProfileId(obfuscatedProfileId)
-                                .setObfuscatedAccountId(obfuscatedAccountId)
-                                .build()
+                                .setObfuscatedAccountId(obfuscatedAccountId).build()
                         } else {
-                            BillingFlowParams.newBuilder()
-                                .setSkuDetails(it)
-                                .build()
+                            BillingFlowParams.newBuilder().setSkuDetails(it).build()
                         }
                         val response = billingClient?.launchBillingFlow(
-                            activity,
-                            billingFlowParams
+                            activity, billingFlowParams
                         )?.responseCode
                         if (response != BillingClient.BillingResponseCode.OK) {
                             if (type == SkuType.SUBS) {
@@ -1323,8 +1269,7 @@ object GBilling {
         if (isConnected) {
             billingClient?.queryPurchasesAsync(type, object : PurchasesResponseListener {
                 override fun onQueryPurchasesResponse(
-                    p0: BillingResult,
-                    p1: MutableList<Purchase>
+                    p0: BillingResult, p1: MutableList<Purchase>
                 ) {
                     Log.e(TAG, p0.responseCode.toString())
                     if (p0.responseCode == BillingClient.BillingResponseCode.OK) {
@@ -1345,8 +1290,7 @@ object GBilling {
     }
 
     private fun getPurchaseListWithoutConnectedCheck(
-        type: String,
-        callback: (purchaseList: List<Purchase>?) -> Unit
+        type: String, callback: (purchaseList: List<Purchase>?) -> Unit
     ) {
         billingClient?.queryPurchasesAsync(type, object : PurchasesResponseListener {
             override fun onQueryPurchasesResponse(p0: BillingResult, p1: MutableList<Purchase>) {
@@ -1363,8 +1307,7 @@ object GBilling {
     }
 
     private fun sortSkuDetailsArray(
-        productsList: ArrayList<String>,
-        skuDetailsList: List<SkuDetails>?
+        productsList: ArrayList<String>, skuDetailsList: List<SkuDetails>?
     ): List<SkuDetails> {
         val newSkuDetailsList = ArrayList<SkuDetails>()
         productsList.forEach { itProductId ->
